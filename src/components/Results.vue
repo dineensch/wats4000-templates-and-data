@@ -8,7 +8,7 @@
     </p>
 
     <ul>
-      <li class="movie-item" v-for="result in results" :key="result.id">
+      <li class="movie-item" v-for="result in results">
         <img v-bind:src=" 'https://image.tmdb.org/t/p/w150_and_h225_bestv2' + result.poster_path" alt="result.title" class="poster-image">
         <h2 class="title"><a v-bind:href="'https://www.themoviedb.org/movie/' + result.id">{{ result.title}}</a></h2>
         <div class="ratings">
@@ -22,7 +22,7 @@
         </p>
         <p class="release-date">Original Release:{{ result.release_date }}</p>
         <ul class="genre-list">
-          <li v-for="genre in result.genres" :key="genre.id">{{ genre }}</li>
+          <li v-for="genre in result.genres">{{ genre }}</li>
         </ul>
       </li>
     </ul>
